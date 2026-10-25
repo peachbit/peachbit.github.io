@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Peachbit</title>
+<meta name="description" content="Peachbit — De petites applications pratiques pour Windows.">
+<link rel="alternate" hreflang="de" href="https://peachbit.github.io/de/">
+<link rel="alternate" hreflang="en" href="https://peachbit.github.io/en/">
+<link rel="alternate" hreflang="es" href="https://peachbit.github.io/es/">
+<link rel="alternate" hreflang="fr" href="https://peachbit.github.io/fr/">
+<link rel="alternate" hreflang="it" href="https://peachbit.github.io/it/">
+<link rel="alternate" hreflang="pl" href="https://peachbit.github.io/pl/">
+<link rel="alternate" hreflang="pt-BR" href="https://peachbit.github.io/pt-br/">
+<link rel="alternate" hreflang="ja" href="https://peachbit.github.io/ja/">
+<link rel="alternate" hreflang="zh-Hans" href="https://peachbit.github.io/zh-hans/">
+<link rel="alternate" hreflang="zh-Hant" href="https://peachbit.github.io/zh-hant/">
+<link rel="alternate" hreflang="ko" href="https://peachbit.github.io/ko/">
+<link rel="alternate" hreflang="x-default" href="https://peachbit.github.io/">
+<link rel="icon" href="../favicon.ico" sizes="16x16 32x32 48x48">
+<link rel="icon" type="image/png" href="../img/peachbit-icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../img/peachbit-icon-512.png">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<main>
+<nav class="langs" aria-label="Langue"><a href="../de/" data-lang="de" hreflang="de" lang="de">Deutsch</a> · <a href="../en/" data-lang="en" hreflang="en" lang="en">English</a> · <a href="../es/" data-lang="es" hreflang="es" lang="es">Español</a> · <span aria-current="true">Français</span> · <a href="../it/" data-lang="it" hreflang="it" lang="it">Italiano</a> · <a href="../pl/" data-lang="pl" hreflang="pl" lang="pl">Polski</a> · <a href="../pt-br/" data-lang="pt-br" hreflang="pt-BR" lang="pt-BR">Português (Brasil)</a> · <a href="../ja/" data-lang="ja" hreflang="ja" lang="ja">日本語</a> · <a href="../zh-hans/" data-lang="zh-hans" hreflang="zh-Hans" lang="zh-Hans">简体中文</a> · <a href="../zh-hant/" data-lang="zh-hant" hreflang="zh-Hant" lang="zh-Hant">繁體中文</a> · <a href="../ko/" data-lang="ko" hreflang="ko" lang="ko">한국어</a></nav>
+<h1 class="logo"><picture><source srcset="../img/peachbit-logo-dark.png" media="(prefers-color-scheme: dark)"><img src="../img/peachbit-logo-light.png" alt="Peachbit" width="276" height="80"></picture></h1>
+<p>De petites applications pratiques pour Windows.</p>
+
+<h2>Applications</h2>
+<div class="app">
+<h3>MonitorSwitcher</h3>
+<p>Changez l&#x27;entrée de votre écran (HDMI, DisplayPort, USB-C…) depuis votre PC, sans chercher les boutons de l&#x27;écran.</p>
+<p><a href="monitorswitcher/privacy/">Politique de confidentialité</a></p>
+</div>
+
+<h2>Contact</h2>
+<p><a href="mailto:peachbitsoft@outlook.com">peachbitsoft@outlook.com</a></p>
+</main>
+<footer>© 2026 Peachbit</footer>
+<script>
+document.querySelectorAll("[data-lang]").forEach(function (a) {
+  a.addEventListener("click", function () {
+    try { localStorage.setItem("pb-lang", a.getAttribute("data-lang")); } catch (e) {}
+  });
+});
+</script>
+</body>
+</html>

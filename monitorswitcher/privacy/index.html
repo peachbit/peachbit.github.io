@@ -1,45 +1,68 @@
 <!doctype html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>MonitorSwitcher プライバシーポリシー / Privacy Policy — Peachbit</title>
-<meta name="description" content="MonitorSwitcher collects no data and makes no network connections. / MonitorSwitcher は情報を収集せず、通信も行いません。">
+<title>MonitorSwitcher — Privacy Policy — Peachbit</title>
+<meta name="description" content="Peachbit — small, handy utilities for Windows.">
+<link rel="alternate" hreflang="de" href="https://peachbit.github.io/de/monitorswitcher/privacy/">
+<link rel="alternate" hreflang="en" href="https://peachbit.github.io/en/monitorswitcher/privacy/">
+<link rel="alternate" hreflang="es" href="https://peachbit.github.io/es/monitorswitcher/privacy/">
+<link rel="alternate" hreflang="fr" href="https://peachbit.github.io/fr/monitorswitcher/privacy/">
+<link rel="alternate" hreflang="it" href="https://peachbit.github.io/it/monitorswitcher/privacy/">
+<link rel="alternate" hreflang="pl" href="https://peachbit.github.io/pl/monitorswitcher/privacy/">
+<link rel="alternate" hreflang="pt-BR" href="https://peachbit.github.io/pt-br/monitorswitcher/privacy/">
+<link rel="alternate" hreflang="ja" href="https://peachbit.github.io/ja/monitorswitcher/privacy/">
+<link rel="alternate" hreflang="zh-Hans" href="https://peachbit.github.io/zh-hans/monitorswitcher/privacy/">
+<link rel="alternate" hreflang="zh-Hant" href="https://peachbit.github.io/zh-hant/monitorswitcher/privacy/">
+<link rel="alternate" hreflang="ko" href="https://peachbit.github.io/ko/monitorswitcher/privacy/">
+<link rel="alternate" hreflang="x-default" href="https://peachbit.github.io/monitorswitcher/privacy/">
 <link rel="icon" href="../../favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" type="image/png" href="../../img/peachbit-icon-32.png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../img/peachbit-icon-512.png">
 <link rel="stylesheet" href="../../style.css">
 </head>
 <body>
+<script>
+(function () {
+  var langs = ["de", "en", "es", "fr", "it", "pl", "pt-br", "ja", "zh-hans", "zh-hant", "ko"], saved = null;
+  try { saved = localStorage.getItem("pb-lang"); } catch (e) {}
+  function pick() {
+    if (saved && langs.indexOf(saved) >= 0) return saved;
+    var list = navigator.languages || [navigator.language || "en"];
+    for (var i = 0; i < list.length; i++) {
+      var l = String(list[i]).toLowerCase(), base = l.split("-")[0];
+      if (base === "zh") return /(tw|hk|mo|hant)/.test(l) ? "zh-hant" : "zh-hans";
+      if (base === "pt") return "pt-br";
+      if (langs.indexOf(base) >= 0) return base;
+    }
+    return "en";
+  }
+  location.replace("../../" + pick() + "/monitorswitcher/privacy/");
+})();
+</script>
 <main>
-<p class="crumb"><a href="../../">Peachbit</a> / MonitorSwitcher</p>
-<h1>MonitorSwitcher<br><span>プライバシーポリシー / Privacy Policy</span></h1>
-<p class="meta">最終更新 / Last updated: 2026-10-25</p>
-<nav class="lang"><a href="#ja">日本語</a> · <a href="#en">English</a></nav>
-
-<section id="ja" lang="ja">
-<h2>日本語</h2>
-<p>MonitorSwitcher（以下「本アプリ」）は、Peachbit が提供する、お使いのPCに接続されたモニターの入力・明るさ・音量を、DDC/CI という映像ケーブル上の通信で切り替えるアプリです。</p>
-<ol>
-<li><strong>収集する情報はありません。</strong> 本アプリは、氏名・メールアドレス・位置情報・利用状況・クラッシュ情報など、個人を特定できる情報もできない情報も、一切収集しません。</li>
-<li><strong>本アプリ自身は通信を行いません。</strong> 本アプリはインターネットや外部のサーバーに接続しません。広告・解析ツール・第三者のSDKも含みません。体験版の残り日数と購入の確認、購入の手続きは、Windows に組み込まれた Microsoft Store の仕組みが行い、Microsoft のプライバシーに関する声明に従います。プロモーションコードを使う場合は、Microsoft のコード引き換えページをブラウザーで開きます。</li>
-<li><strong>PCの中だけに保存するもの。</strong> 設定（表示言語、テーマ、入力の名前、ホットキー、プリセットなど）と動作ログは、このPCの中のアプリ専用フォルダにだけ保存されます。これらが外部へ送られることはありません。アプリをアンインストールすると削除されます。</li>
-<li><strong>モニターとの通信。</strong> 本アプリがモニターとやり取りするのは、入力・明るさ・音量の読み取りと変更、およびモニターの機種名や対応機能の読み取りだけです。</li>
-<li><strong>お問い合わせ。</strong> 本ポリシーについてのお問い合わせは、<a href="mailto:peachbitsoft@outlook.com">peachbitsoft@outlook.com</a>（Peachbit）までお願いします。</li>
-</ol>
-</section>
-
-<section id="en" lang="en">
-<h2>English</h2>
-<p>MonitorSwitcher ("the app"), made by Peachbit, switches the input, brightness and volume of the monitors connected to your PC over DDC/CI, a communication channel on the video cable.</p>
-<ol>
-<li><strong>No data is collected.</strong> The app does not collect any information — personal or not — such as names, email addresses, location, usage statistics or crash reports.</li>
-<li><strong>The app itself makes no network connections.</strong> It never connects to the internet or to any server, and contains no advertising, analytics or third-party SDKs. The trial period, purchase status and purchases are handled by the Microsoft Store service built into Windows, under the Microsoft Privacy Statement. Redeeming a promo code opens Microsoft's code redemption page in your browser.</li>
-<li><strong>Stored only on your PC.</strong> Settings (language, theme, input names, hotkeys, scenes, etc.) and a diagnostic log are stored only in the app's own folder on this PC. They are never transmitted, and they are removed when the app is uninstalled.</li>
-<li><strong>Communication with monitors.</strong> The app only reads and changes input, brightness and volume, and reads each monitor's model name and capabilities.</li>
-<li><strong>Contact.</strong> For questions about this policy, email <a href="mailto:peachbitsoft@outlook.com">peachbitsoft@outlook.com</a> (Peachbit).</li>
-</ol>
-</section>
+<h1 class="logo"><picture><source srcset="../../img/peachbit-logo-dark.png" media="(prefers-color-scheme: dark)"><img src="../../img/peachbit-logo-light.png" alt="Peachbit" width="276" height="80"></picture></h1>
+<ul class="pick">
+<li><a href="../../de/monitorswitcher/privacy/" data-lang="de" lang="de">Deutsch</a></li>
+<li><a href="../../en/monitorswitcher/privacy/" data-lang="en" lang="en">English</a></li>
+<li><a href="../../es/monitorswitcher/privacy/" data-lang="es" lang="es">Español</a></li>
+<li><a href="../../fr/monitorswitcher/privacy/" data-lang="fr" lang="fr">Français</a></li>
+<li><a href="../../it/monitorswitcher/privacy/" data-lang="it" lang="it">Italiano</a></li>
+<li><a href="../../pl/monitorswitcher/privacy/" data-lang="pl" lang="pl">Polski</a></li>
+<li><a href="../../pt-br/monitorswitcher/privacy/" data-lang="pt-br" lang="pt-BR">Português (Brasil)</a></li>
+<li><a href="../../ja/monitorswitcher/privacy/" data-lang="ja" lang="ja">日本語</a></li>
+<li><a href="../../zh-hans/monitorswitcher/privacy/" data-lang="zh-hans" lang="zh-Hans">简体中文</a></li>
+<li><a href="../../zh-hant/monitorswitcher/privacy/" data-lang="zh-hant" lang="zh-Hant">繁體中文</a></li>
+<li><a href="../../ko/monitorswitcher/privacy/" data-lang="ko" lang="ko">한국어</a></li>
+</ul>
 </main>
-<footer>© 2026 Peachbit</footer>
+<script>
+document.querySelectorAll("[data-lang]").forEach(function (a) {
+  a.addEventListener("click", function () {
+    try { localStorage.setItem("pb-lang", a.getAttribute("data-lang")); } catch (e) {}
+  });
+});
+</script>
 </body>
 </html>
