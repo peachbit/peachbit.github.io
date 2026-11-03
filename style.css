@@ -45,3 +45,9 @@ footer { max-width: 760px; margin: 0 auto; padding: 16px; color: var(--muted); f
 .langs span { color: var(--text); font-weight: 600; }
 .pick { list-style: none; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; }
 .pick a { display: block; padding: 10px 14px; border: 1px solid var(--line); border-radius: 10px; background: var(--card); text-decoration: none; }
+.app-head { display: flex; gap: 14px; align-items: flex-start; }
+.app-icon { flex: none; width: 64px; height: 64px; }
+.app-links { display: flex; flex-wrap: wrap; gap: 8px 18px; align-items: center; margin: 12px 0 0 !important; }
+.store { display: inline-block; padding: 8px 18px; border-radius: 999px; background: #c2405f; color: #fff; font-weight: 600; text-decoration: none; }
+.store:hover, .store:focus-visible { filter: brightness(1.08); text-decoration: underline; }
+@media (prefers-color-scheme: dark) { .store { background: var(--accent); color: #1d1a19; } }
